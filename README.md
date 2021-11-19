@@ -101,10 +101,19 @@ Use Linux or in Windows just launch Webbroser with disabled Angle `chrome.exe --
 
 ### To test shaders result in CPU-shader emulation:
 
-Use swiftshader (works on every platform but this is *not best option*) `google-chrome --incognito --use-gl=swiftshader-webgl` many of listed shaders will may crash *swiftshader* or have completely wrong result because bugs in swiftshader.
+*Use swiftshader* (works on every platform but this is *not best option*) 
 
-Use Mesa LLVM (llvmpipe) OpenGL emulation (**best option**) `Xephyr -br -ac -noreset -screen 1280x720 :10&` and launch firefox there `DISPLAY=:10 XDG_SESSION_TYPE=x11 firefox` it will render WebGL on CPU llvmpipe driver. (do not launch chrome this way, chrome will use swiftshader instead of llvmpipe) 
-To see that *llvmpipe* used - `DISPLAY=:10 glxinfo | grep OpenGL | grep string`
+`google-chrome --incognito --use-gl=swiftshader-webgl`
+
+Many of listed shaders will may crash *swiftshader* or have completely wrong result because bugs in swiftshader.
+
+**Use Mesa LLVM** (llvmpipe) OpenGL emulation (**best option**) 
+
+`Xephyr -br -ac -noreset -screen 1280x720 :10&`
+
+And launch firefox there `DISPLAY=:10 XDG_SESSION_TYPE=x11 firefox`
+
+It will render WebGL on CPU llvmpipe driver. (do not launch chrome this way, chrome will use swiftshader instead of llvmpipe). To see that *llvmpipe* used - `DISPLAY=:10 glxinfo | grep OpenGL | grep string`
 
 ___
 
