@@ -15,7 +15,14 @@ ___
 
 # Bugs (this repo code)
 
-### bug_AMD_128_bytes_push_const
+### bug_AMD_128_bytes_push_const (not a bug)
+
+## This is not a bug 
+
+> Any member of a push constant block that is declared as an array must only be accessed with dynamically uniform indices.
+
+***[khronos.org/registry/vulkan/specs](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/html/chap15.html#interfaces-resources-pushconst)***
+
 
 I send **128 bytes push_const to fragment shader**. (bug works with similar behavior when push_const send to Vertex shader also, in Fragment mode bug better visible)
 
@@ -50,6 +57,8 @@ Download bin build *Warning exe/bin file you may not trust this*  - [bug_AMD_128
 
 When **sampler2D have *no mipmaps* but *has linear filter* and shader *has push_const*** - functions `texture` has some unpredictable result. (woks only in this specific shader(shader made from other large shader where I found this bug)).
 Bug does not work when shader does not have push_constants.
+
+*Why I think this is a bug* - it works only in this specific shader, minimal shader with just `texture(iChannel0...)` will return correct value.
 
 **[Shadertoy shader](https://www.shadertoy.com/view/sltGWj)** - bug work on Shadertoy only in OpenGL mode `chrome.exe --use-angle=gl` and only when FBO has mipmaps. 
 But in OpenGL this is "not a bug" or atleast it can be explained, Nviida behavior in OpenGL you can see on video below it still very weird(numbers blinking without any consistency), but it also can be explained - mipmap generation is inconsistant for texture(FBO) with non pow2 siz, I think this is reason for OpenGL behvior in this shader.
