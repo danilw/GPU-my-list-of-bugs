@@ -142,7 +142,7 @@ ___
 
 [BUG Nvidia OpenGL compiler bug](https://www.shadertoy.com/view/NsdXRs) - Nvidia OpenGL compiler bug
 
-[BUG Nvidia OpenGL arrays wrong](https://www.shadertoy.com/view/7tjGRW) - only Nvidia OpenGL
+[BUG Nvidia OpenGL arrays wrong](https://www.shadertoy.com/view/7tjGRW) - only Nvidia OpenGL, [Other Nvidia OpenGL bugs](https://forums.developer.nvidia.com/t/opengl3-out-in-mat4-broken-on-many-nvidia-videocards-in-vertex-shader-shader-code-included/145921)
 
 [BUG Nvidia const to array](https://www.shadertoy.com/view/NslGR4) - Nvidia OpenGL and Vulkan driver shader compiler bug
 
