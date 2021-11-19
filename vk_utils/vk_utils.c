@@ -61,7 +61,7 @@ vk_error vk_enumerate_devices(VkInstance vk, VkSurfaceKHR *surface, struct vk_ph
             if ((queue_family_properties[j].queueFlags & VK_QUEUE_GRAPHICS_BIT) && supports_present)
             {
               VkPhysicalDeviceProperties pr;
-              vkGetPhysicalDeviceProperties(phy_devs[*idx], &pr);
+              vkGetPhysicalDeviceProperties(phy_devs[i], &pr);
               if(filter_amd&&(strstr(pr.deviceName, "AMD")||strstr(pr.deviceName, "Amd")||strstr(pr.deviceName, "amd"))){
                 *idx = i;
                 use_idx = true;
