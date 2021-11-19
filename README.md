@@ -105,7 +105,7 @@ Use Linux or in Windows just launch Webbroser with disabled Angle `chrome.exe --
 
 `google-chrome --incognito --use-gl=swiftshader-webgl`
 
-Many of listed shaders will may crash *swiftshader* or have completely wrong result because bugs in swiftshader.
+Many of listed shaders will crash *swiftshader* or have completely wrong result because bugs in swiftshader.
 
 **Use OpenGL Mesa LLVM (llvmpipe) OpenGL emulation** (**best option**) 
 
