@@ -71,7 +71,7 @@ Works same on all drivers and platforms (Linux/Windows).
 
 **Test** - bug may not work from start of application, try to resize window (resize to bigger window size).
 
-Works on AMD and Nvidia(with not same behavior), I still not sure is it my code bug or not, so idk, video of this bug on Nvidia:
+Works on AMD and Nvidia(with not same behavior), I still not sure is it my code bug or not, so idk, **youtube video link** of this bug on Nvidia:
 
 [![youtube_mip](https://danilw.github.io/GLSL-howto/vulkan_sh_launcher/yt_vkmip.png)](https://youtu.be/OcpBVHMb88M)
 
