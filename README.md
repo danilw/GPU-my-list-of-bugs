@@ -154,8 +154,6 @@ ___
 
 [BUG Vulkan Nvidia noise bug](https://www.shadertoy.com/view/ttjcRW) - [fixed already](https://forums.developer.nvidia.com/t/vulkan-shader-bug-can-someone-confirm-is-this-only-my-bug/140392), but very weird - basically all shaders that use fract and mod was bugged in Nvidia Vulkan for 5 years and no one noticed...
 
-[BUG Vulkan uint32 128 bytes](https://www.shadertoy.com/view/3sXyW2) - related to [GPU-my-list-of-bugs repository](https://github.com/danilw/GPU-my-list-of-bugs)
-
 [BUG floatBitsToUint comp vs real](https://www.shadertoy.com/view/tlfBRB) - related to blog post [Float precision on GPU, bugs/features](https://arugl.medium.com/float-precision-on-gpu-bugs-features-178ddd030f)
 
 [BUG OpenGL Nvidia high GPU usage](https://www.shadertoy.com/view/tdfGWS) - Nvidia OpenGL compiler bug
@@ -173,6 +171,8 @@ ___
 [BUG GPU driver unroll prediction](https://www.shadertoy.com/view/NlXXWS) - using break in loop adds precision to operation, expected because shader compiler compile shader diferently for each case.
 
 [BUG GPU precision never 0](https://www.shadertoy.com/view/ftXSWB) - related to blog post [Float precision on GPU, bugs/features](https://arugl.medium.com/float-precision-on-gpu-bugs-features-178ddd030f)
+
+[BUG Vulkan uint32 128 bytes](https://www.shadertoy.com/view/3sXyW2) - related to [GPU-my-list-of-bugs repository](https://github.com/danilw/GPU-my-list-of-bugs)
 
 [BUG Mip inconsistent Vulkan/Ogl](https://www.shadertoy.com/view/sltGWj) - related to [GPU-my-list-of-bugs repository](https://github.com/danilw/GPU-my-list-of-bugs)
 
