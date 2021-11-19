@@ -42,7 +42,7 @@ Nvidia and AMD result image:
 
 ![AMD_128](https://danilw.github.io/GLSL-howto/vulkan_sh_launcher/vk_amd_128pc.png)
 
-Related bugreports - 
+Related bugreports - [mesa/-/issues/5656](https://gitlab.freedesktop.org/mesa/mesa/-/issues/5656)
 
 Download bin build *Warning exe/bin file you may not trust this*  - [bug_AMD_128_bytes_push_const.zip](https://danilw.github.io/GLSL-howto/vulkan_sh_launcher/bug_AMD_128_bytes_push_const.zip)
 
