@@ -61,7 +61,7 @@ Bug does not work when shader does not have push_constants.
 *Why I think this is a bug* - it works only in this specific shader, minimal shader with just `texture(iChannel0...)` will return correct value.
 
 **[Shadertoy shader](https://www.shadertoy.com/view/sltGWj)** - bug work on Shadertoy only in OpenGL mode `chrome.exe --use-angle=gl` and only when FBO has mipmaps. 
-But in OpenGL this is "not a bug" or atleast it can be explained, Nviida behavior in OpenGL you can see on video below it still very weird(numbers blinking without any consistency), but it also can be explained - mipmap generation is inconsistant for texture(FBO) with non pow2 siz, I think this is reason for OpenGL behvior in this shader.
+But in OpenGL this is "not a bug" or atleast it can be explained, Nviida behavior in OpenGL you can see on video below it still very weird(numbers blinking without any consistency), but it also can be explained - mipmap generation is inconsistant for texture(FBO) with non pow2 size, I think this is reason for OpenGL behavior in this shader.
 
 Building: (on Windows use MSVS and open cmake file there)
 
