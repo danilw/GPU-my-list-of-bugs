@@ -7,6 +7,8 @@
 
 All of this "bugs" works(can be reproduced) in Khronos Vulkan Examples, this why I think - this is not my code bugs (atleast not Vulkan code side).
 
+### Contact: [**Join discord server**](https://discord.gg/JKyqWgt)
+
 ___
 
 To select GPU use launch option `--gpu X` where `X` is ID of GPU 0-1-2-3 etc. Used GPU printed to terminal output on application launch.
