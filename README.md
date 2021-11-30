@@ -162,6 +162,8 @@ ___
 
 [BUG smoothstep( 1, 0 ,0) specs](https://www.shadertoy.com/view/tdf3zf) - `smoothsep` on GPU does not follow specs, when on CPU it does.
 
+[BUG Vulkan Nvidia sin hash](https://www.shadertoy.com/view/stK3WG) - sin hash broken in Vulkan on Nvidia, when in OpenGL everything fine.
+
 
 
 ## *Not a Bug*, its expected behavior but it still weird
