@@ -105,7 +105,7 @@ ___
 
 ### Driver updates:
 
-Summer 2021 AMD update their driver (Linux and Windows, close and opensource) with fixing all my bugs that I reported during 2020-2021. Vulkan only fixes, OpenGL still very broken there. 
+Summer 2021 AMD update their driver (Linux and Windows, close and opensource) with fixing all my bugs that I reported during 2020-2021. Vulkan only fixes, OpenGL still very broken there. (that makes my [GLSL Auto Tetris](https://medium.com/geekculture/launching-619-thousand-tetris-on-gpu-their-rendering-and-a-simple-bot-f2449b607db1) and other my demos work in Vulkan on AMD GPUs)
 
 Nvidia 510+ version (Linux and Windows, begin of 2022 update) - their SPIR-V compiler in driver fix some bugs with mat/vec/array index and some memory-[leaks (video)](https://youtu.be/puPplT1nPCI) from shaders also fixed, some bugs I listed also stop working in Vulkan(but still works in OpenGL), some bugs changed behavior.
 
