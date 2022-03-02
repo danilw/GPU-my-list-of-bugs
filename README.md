@@ -98,6 +98,8 @@ ___
 
 [BUG normalize bugs](https://www.shadertoy.com/view/7lt3Rl) - related to [Cubemap GLSL shader debug functions](https://arugl.medium.com/cubemap-glsl-shader-debug-functions-3f4c659e7833)
 
+[BUG tile rendering dFd test](https://www.shadertoy.com/view/NsXBWr) - not a bug, its expected behavior - dFd and texture functions return wrong result on edges when tile size not even. Related to [tile rendering example](https://www.shadertoy.com/view/tltBzM) and [advanced tile render](https://www.shadertoy.com/view/7ldXzf)
+
 ___
 
 *Angle experience* - some of bug-related experience (unexpected behavior when your code is fine) - launching my [GLSL card game in ANGLE fist time (video)](https://youtu.be/uY15AZfesU4), Godot in ANGLE [FBO size jump (video)](https://youtu.be/rqmQ7EnDmb8), till 2019 (pre 76 version) Chrome had [broken instanced particles support](https://github.com/godotengine/godot/issues/28573).
