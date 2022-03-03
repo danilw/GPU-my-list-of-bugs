@@ -98,7 +98,9 @@ ___
 
 [BUG normalize bugs](https://www.shadertoy.com/view/7lt3Rl) - related to [Cubemap GLSL shader debug functions](https://arugl.medium.com/cubemap-glsl-shader-debug-functions-3f4c659e7833)
 
-[BUG tile rendering dFd test](https://www.shadertoy.com/view/NsXBWr) - not a bug, its expected behavior - dFd and texture functions return wrong result on edges when tile size not even. Related to [tile rendering example](https://www.shadertoy.com/view/tltBzM) and [advanced tile render](https://www.shadertoy.com/view/7ldXzf)
+[BUG tile rendering dFd test](https://www.shadertoy.com/view/NsXBWr) - not a bug, its expected behavior - dFd and texture functions return wrong result on edges when tile size not even. Related to [tile rendering example](https://www.shadertoy.com/view/tltBzM) and [advanced tile render](https://www.shadertoy.com/view/7ldXzf) (look line 4 in Common)
+
+[BUG float precision patterns](https://www.shadertoy.com/view/NsBBDW) - patterns of sin, sqrt diferent between GPUs (look screenshot), related to [Float precision on GPU, bugs/features](https://medium.com/@arugl/float-precision-on-gpu-bugs-features-178ddd030f)
 
 ___
 
