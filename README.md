@@ -71,6 +71,7 @@ ___
 [BUG OpenGL Nvidia high GPU usage](https://www.shadertoy.com/view/tdfGWS) - Nvidia OpenGL compiler bug
 
 [BUG smoothstep( 1, 0 ,0) specs](https://www.shadertoy.com/view/tdf3zf) - `smoothsep` on GPU does not follow specs, when on CPU it does.
+___
 
 ## *Not a Bug*, its expected behavior but it still weird
 
