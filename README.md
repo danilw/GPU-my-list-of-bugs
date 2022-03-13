@@ -50,7 +50,7 @@ ___
 
 | Screenshot, click to open | Bug link |
 |-------------|------------|
-| <img src="https://danilw.github.io/GLSL-howto/vulkan_sh_launcher/images_bugs/wdVyWD.png" width="650" height="auto" /> | Right is ANGLE | [BUG ANGLE dFd broken on break](https://www.shadertoy.com/view/wdVyWD) - Angle bug |
+| <img src="https://danilw.github.io/GLSL-howto/vulkan_sh_launcher/images_bugs/wdVyWD.png" width="650" height="auto" /> | [BUG ANGLE dFd broken on break](https://www.shadertoy.com/view/wdVyWD) - Angle bug |
 | <img src="https://danilw.github.io/GLSL-howto/vulkan_sh_launcher/images_bugs/NsdXRs.png" width="650" height="auto" /> | [BUG Nvidia OpenGL compiler bug](https://www.shadertoy.com/view/NsdXRs) - Nvidia OpenGL compiler bug |
 | <img src="https://danilw.github.io/GLSL-howto/vulkan_sh_launcher/images_bugs/7tjGRW.png" width="650" height="auto" /> | [BUG Nvidia OpenGL arrays wrong](https://www.shadertoy.com/view/7tjGRW) (array and matX indexing) - only Nvidia OpenGL, [Other Nvidia OpenGL bugs](https://forums.developer.nvidia.com/t/opengl3-out-in-mat4-broken-on-many-nvidia-videocards-in-vertex-shader-shader-code-included/145921) (look there for more matX bugs) |
 | <img src="https://danilw.github.io/GLSL-howto/vulkan_sh_launcher/images_bugs/NslGR4.png" width="650" height="auto" /> | [BUG Nvidia const to array](https://www.shadertoy.com/view/NslGR4) (array index bug) - Nvidia OpenGL and Vulkan driver shader compiler bug |
