@@ -44,21 +44,23 @@ And select `--gpu=0` in my vulkan-shadertoy-launcher launch line option. GPu sho
 
 ___
 
-## List of shader bugs (Shadertoy links, look *in comments* on Shadertoy page for *screenshot of bug*)
+## List of shader bugs:
 
-[BUG ANGLE dFd broken on break](https://www.shadertoy.com/view/wdVyWD) - Angle bug
+### Shadertoy links, click on Screenshot previews to see full image.
+
+| Screenshot, click to open | Screenshot description | Bug link |
+|--------------|-----------|------------|
+| <img src="https://danilw.github.io/GLSL-howto/images_bugs/wdVyWD.png" width="auto" height="200" /> | Right is ANGLE | [BUG ANGLE dFd broken on break](https://www.shadertoy.com/view/wdVyWD) - Angle bug |
+| <img src="https://danilw.github.io/GLSL-howto/images_bugs/NsdXRs.png" width="auto" height="200" /> | Left is Nvidia bug, right is correct. | [BUG Nvidia OpenGL compiler bug](https://www.shadertoy.com/view/NsdXRs) - Nvidia OpenGL compiler bug |
+| <img src="https://danilw.github.io/GLSL-howto/images_bugs/7tjGRW.png" width="auto" height="200" /> | Top is Nvidia bug, bottom is correct. | [BUG Nvidia OpenGL arrays wrong](https://www.shadertoy.com/view/7tjGRW) (array and matX indexing) - only Nvidia OpenGL, [Other Nvidia OpenGL bugs](https://forums.developer.nvidia.com/t/opengl3-out-in-mat4-broken-on-many-nvidia-videocards-in-vertex-shader-shader-code-included/145921) (look there for more matX bugs) |
+| <img src="https://danilw.github.io/GLSL-howto/images_bugs/NslGR4.png" width="auto" height="200" /> | Left is Nvidia bug, right is correct. | [BUG Nvidia const to array](https://www.shadertoy.com/view/NslGR4) (array index bug) - Nvidia OpenGL and Vulkan driver shader compiler bug |
+| <img src="https://danilw.github.io/GLSL-howto/images_bugs/.png" width="auto" height="200" /> | Left CPU, right GPU. | [BUG Rand/Hash pre-calculated](https://www.shadertoy.com/view/wdXGW8) - I think this is not expected, related to blog post [Float precision on GPU, bugs/features](https://arugl.medium.com/float-precision-on-gpu-bugs-features-178ddd030f) |
+| <img src="https://danilw.github.io/GLSL-howto/images_bugs/tlfBRB.png" width="auto" height="200" /> | Result diferent on every GPU/API. | [BUG floatBitsToUint comp vs real](https://www.shadertoy.com/view/tlfBRB) - related to blog post [Float precision on GPU, bugs/features](https://arugl.medium.com/float-precision-on-gpu-bugs-features-178ddd030f) |
+| <img src="https://danilw.github.io/GLSL-howto/images_bugs/stK3WG.png" width="auto" height="200" /> | Vulkan result incorrect/unexpected. | [BUG Vulkan Nvidia sin hash](https://www.shadertoy.com/view/stK3WG) - sin hash broken in Vulkan on Nvidia, when in OpenGL everything fine. |
 
 [BUG Angle 20x slowdown](https://www.shadertoy.com/view/flSSDV) - DX11 [FXC bug](https://bugs.chromium.org/p/chromium/issues/detail?id=1238461)
 
 [BUG Chrome or Nvidia compiling](https://www.shadertoy.com/view/fsSSzd) - Nvidia OpenGL compiler bug
-
-[BUG Nvidia OpenGL compiler bug](https://www.shadertoy.com/view/NsdXRs) - Nvidia OpenGL compiler bug
-
-[BUG Nvidia OpenGL arrays wrong](https://www.shadertoy.com/view/7tjGRW) (array and matX indexing) - only Nvidia OpenGL, [Other Nvidia OpenGL bugs](https://forums.developer.nvidia.com/t/opengl3-out-in-mat4-broken-on-many-nvidia-videocards-in-vertex-shader-shader-code-included/145921) (look there for more matX bugs)
-
-[BUG Nvidia const to array](https://www.shadertoy.com/view/NslGR4) (array index bug) - Nvidia OpenGL and Vulkan driver shader compiler bug
-
-[BUG Rand/Hash pre-calculated](https://www.shadertoy.com/view/wdXGW8) - I think this is not expected, related to blog post [Float precision on GPU, bugs/features](https://arugl.medium.com/float-precision-on-gpu-bugs-features-178ddd030f)
 
 [BUG Vulkan AMD crash](https://www.shadertoy.com/view/wdfcDX) - old bug, [fixed already](https://community.amd.com/thread/250887)
 
@@ -66,41 +68,31 @@ ___
 
 [BUG Vulkan Nvidia noise bug](https://www.shadertoy.com/view/ttjcRW) - [fixed already](https://forums.developer.nvidia.com/t/vulkan-shader-bug-can-someone-confirm-is-this-only-my-bug/140392), but very weird - basically all shaders that use fract and mod was bugged in Nvidia Vulkan for 5 years and no one noticed... Videos of this bug [1](https://youtu.be/hBbI2rw18ew) [2](https://youtu.be/KEqHarMBmOU)
 
-[BUG floatBitsToUint comp vs real](https://www.shadertoy.com/view/tlfBRB) - related to blog post [Float precision on GPU, bugs/features](https://arugl.medium.com/float-precision-on-gpu-bugs-features-178ddd030f)
-
 [BUG OpenGL Nvidia high GPU usage](https://www.shadertoy.com/view/tdfGWS) - Nvidia OpenGL compiler bug
 
 [BUG smoothstep( 1, 0 ,0) specs](https://www.shadertoy.com/view/tdf3zf) - `smoothsep` on GPU does not follow specs, when on CPU it does.
 
-[BUG Vulkan Nvidia sin hash](https://www.shadertoy.com/view/stK3WG) - sin hash broken in Vulkan on Nvidia, when in OpenGL everything fine.
-
-
-
 ## *Not a Bug*, its expected behavior but it still weird
 
-[BUG 32-bit float precision](https://www.shadertoy.com/view/sllXW8) - related to blog post [Float precision on GPU, bugs/features](https://arugl.medium.com/float-precision-on-gpu-bugs-features-178ddd030f)
-
-[BUG 32-bit float precision test](https://www.shadertoy.com/view/ftXXW4) - one of bugs related to *length of normalized vector not equal 1*
-
-[BUG GPU driver unroll prediction](https://www.shadertoy.com/view/NlXXWS) - using break in loop adds precision to operation, expected because shader compiler compile shader diferently for each case.
-
-[BUG GPU precision never 0](https://www.shadertoy.com/view/ftXSWB) - related to blog post [Float precision on GPU, bugs/features](https://arugl.medium.com/float-precision-on-gpu-bugs-features-178ddd030f)
+| Screenshot, click to open | Screenshot description | Bug link |
+|--------------|-----------|------------|
+| <img src="https://danilw.github.io/GLSL-howto/images_bugs/sllXW8.png" width="auto" height="200" /> | Diferent GPU/API result. | [BUG 32-bit float precision](https://www.shadertoy.com/view/sllXW8) - related to blog post [Float precision on GPU, bugs/features](https://arugl.medium.com/float-precision-on-gpu-bugs-features-178ddd030f) |
+| <img src="https://danilw.github.io/GLSL-howto/images_bugs/ftXXW4.png" width="auto" height="200" /> | Comparison of 32 bit float vs 64 bit float. Bug is noise when camera face plane(mouse to rotate). | [BUG 32-bit float precision test](https://www.shadertoy.com/view/ftXXW4) - float computation related to matrix operations and/or vec3 normalize or length stuff. Also I use this shader to compare 32bit floats vs 64 bit floats. |
+| <img src="https://danilw.github.io/GLSL-howto/images_bugs/NlXXWS.png" width="auto" height="200" /> | Comparison of results. | [BUG GPU driver unroll prediction](https://www.shadertoy.com/view/NlXXWS) - using break in loop adds precision to operation, expected because shader compiler compile shader diferently for each case. |
+| <img src="https://danilw.github.io/GLSL-howto/images_bugs/ftXSWB.png" width="auto" height="200" /> | Result. | [BUG GPU precision never 0](https://www.shadertoy.com/view/ftXSWB) - related to blog post [Float precision on GPU, bugs/features](https://arugl.medium.com/float-precision-on-gpu-bugs-features-178ddd030f) |
+| <img src="https://danilw.github.io/GLSL-howto/images_bugs/fsc3RM.png" width="auto" height="200" /> | Just weird. | [BUG Nvidia Vulkan UB behavior](https://www.shadertoy.com/view/fsc3RM) - weird UB behavior that result not same image depends on GPU, Vulkan only |
+| <img src="https://danilw.github.io/GLSL-howto/images_bugs/7lt3Rl.png" width="auto" height="200" /> | normalize does not retrn vector with length 1.0 | [BUG normalize bugs](https://www.shadertoy.com/view/7lt3Rl) - related to [Cubemap GLSL shader debug functions](https://arugl.medium.com/cubemap-glsl-shader-debug-functions-3f4c659e7833) |
+| <img src="https://danilw.github.io/GLSL-howto/images_bugs/NsBBDW.png" width="auto" height="200" /> | Visual patterns diferent | [BUG float precision patterns](https://www.shadertoy.com/view/NsBBDW) - patterns of sin, sqrt diferent between GPUs (look screenshot), related to [Float precision on GPU, bugs/features](https://medium.com/@arugl/float-precision-on-gpu-bugs-features-178ddd030f) |
 
 [BUG Vulkan uint32 128 bytes push constant](https://www.shadertoy.com/view/3sXyW2) (does not work from WebGL, need modification read Shadertoy comment) - (not a bug) - just reminder for myself: in Vulkan - *Any member of a push constant block that is declared as an array must only be accessed with dynamically uniform indices*. If you use array as push const then result will be this - [screenshot 1](https://danilw.github.io/GLSL-howto/vulkan_sh_launcher/vk_amd_128pc.png), [screenshot 2](https://danilw.github.io/GLSL-howto/test_AMD_shader_ub/amd.png). Do not use array as push-constant in Vulkan. [khronos.org/registry/vulkan/specs](https://www.khronos.org/registry/vulkan/specs/1.2-extensions/html/chap15.html#interfaces-resources-pushconst)
 
 [BUG Mip inconsistent Vulkan/Ogl](https://www.shadertoy.com/view/sltGWj) - When **sampler2D have *no mipmaps* but *has linear filter* and shader *has push_const*** - functions `texture` has some unpredictable result. (woks only in this specific shader(shader made from other large shader where I found this bug)). Bug does not work when shader does not have push_constants. Bug work on Shadertoy only in OpenGL mode `chrome.exe --use-angle=gl` and only when FBO has mipmaps. But in OpenGL this is "not a bug" or atleast it can be explained. [youtube video of this bug](https://youtu.be/OcpBVHMb88M)
 
-[BUG Nvidia Vulkan UB behavior](https://www.shadertoy.com/view/fsc3RM) - weird UB behavior that result not same image depends on GPU, Vulkan only
-
-[BUG Vulkan not equal to OpenGL](https://www.shadertoy.com/view/slsXzs) - weird UB behavior on GPU, on same GPU result not equal in OpenGL and Vulkan. Can be expected its UB.
+[BUG Vulkan not equal to OpenGL](https://www.shadertoy.com/view/slsXzs) - UB behavior in OpenGL and Vulkan. I think it because CPU-side precompilation result UB diferently.
 
 [BUG cubemap rayDir to fragCoord](https://www.shadertoy.com/view/7l33W2) - related to [Cubemap GLSL shader debug functions](https://arugl.medium.com/cubemap-glsl-shader-debug-functions-3f4c659e7833)
 
-[BUG normalize bugs](https://www.shadertoy.com/view/7lt3Rl) - related to [Cubemap GLSL shader debug functions](https://arugl.medium.com/cubemap-glsl-shader-debug-functions-3f4c659e7833)
-
 [BUG tile rendering dFd test](https://www.shadertoy.com/view/NsXBWr) - not a bug, its expected behavior - dFd and texture functions return wrong result on edges when tile size not even. Related to [tile rendering example](https://www.shadertoy.com/view/tltBzM) and [advanced tile render](https://www.shadertoy.com/view/7ldXzf) (look line 4 in Common)
-
-[BUG float precision patterns](https://www.shadertoy.com/view/NsBBDW) - patterns of sin, sqrt diferent between GPUs (look screenshot), related to [Float precision on GPU, bugs/features](https://medium.com/@arugl/float-precision-on-gpu-bugs-features-178ddd030f)
 
 ___
 
