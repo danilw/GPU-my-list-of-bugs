@@ -10,9 +10,9 @@ ___
 
 ### To **test this bugs in Vulkan**:
 
-*(some shaders require modification of Vulkan launcher, or works only in OpenGL)*
+*(some shaders require modification of Vulkan launcher, or works only in OpenGL, read description on each bug-shader)*
 
-Use **[vulkan-shadertoy-launcher Release](https://github.com/danilw/vulkan-shadertoy-launcher/releases)** and copy-paste Shadertoy shader to `shaders/shadertoy/*.glsl` files.
+Download *empty_template_shadertoy.zip* from **[vulkan-shadertoy-launcher Release](https://github.com/danilw/vulkan-shadertoy-launcher/releases)** and copy-paste Shadertoy shader to `shaders/shadertoy/*.glsl` files.
 
 ### To **test in OpenGL**:
 
