@@ -51,9 +51,7 @@ ___
 | Screenshot, click to open | Bug link |
 |-------------|------------|
 | <img src="https://danilw.github.io/GLSL-howto/vulkan_sh_launcher/images_bugs/wdVyWD.png" width="650" height="auto" /> | [BUG ANGLE dFd broken on break](https://www.shadertoy.com/view/wdVyWD) - Angle bug |
-| <img src="https://danilw.github.io/GLSL-howto/vulkan_sh_launcher/images_bugs/NsdXRs.png" width="650" height="auto" /> | [BUG Nvidia OpenGL compiler bug](https://www.shadertoy.com/view/NsdXRs) - Nvidia OpenGL compiler bug |
-| <img src="https://danilw.github.io/GLSL-howto/vulkan_sh_launcher/images_bugs/7tjGRW.png" width="650" height="auto" /> | [BUG Nvidia OpenGL arrays wrong](https://www.shadertoy.com/view/7tjGRW) (array and matX indexing) - only Nvidia OpenGL, [Other Nvidia OpenGL bugs](https://forums.developer.nvidia.com/t/opengl3-out-in-mat4-broken-on-many-nvidia-videocards-in-vertex-shader-shader-code-included/145921) (look there for more matX bugs) |
-| <img src="https://danilw.github.io/GLSL-howto/vulkan_sh_launcher/images_bugs/NslGR4.png" width="650" height="auto" /> | [BUG Nvidia const to array](https://www.shadertoy.com/view/NslGR4) (array index bug) - Nvidia OpenGL and Vulkan driver shader compiler bug |
+| <img src="https://danilw.github.io/GLSL-howto/vulkan_sh_launcher/images_bugs/NslGR4.png" width="650" height="auto" /> | [BUG Nvidia const to array](https://www.shadertoy.com/view/NslGR4) (array index bug) - Nvidia OpenGL and Vulkan driver shader compiler bug, [Other Nvidia OpenGL bugs in array](https://forums.developer.nvidia.com/t/opengl3-out-in-mat4-broken-on-many-nvidia-videocards-in-vertex-shader-shader-code-included/145921)  |
 | <img src="https://danilw.github.io/GLSL-howto/vulkan_sh_launcher/images_bugs/NtlyWn.png" width="650" height="auto" /> | [BUG Vulkan AMD array indexing](https://www.shadertoy.com/view/NtlyWn) (array index bug) - AMD Vulkan driver bug, [bugreport](https://community.amd.com/t5/opengl-vulkan/vulkan-amd-arrays-or-precompiling-spirv-bug/m-p/517283#M4172). And **if you combine this code with Nvidia Vulkan array indexing bug - you can have shader that bugged on both Nvidia and AMD at same time** (yeee super cool). |
 | <img src="https://danilw.github.io/GLSL-howto/vulkan_sh_launcher/images_bugs/wdXGW8.png" width="650" height="auto" /> | [BUG Rand/Hash pre-calculated](https://www.shadertoy.com/view/wdXGW8) - I think this is not expected, related to blog post [Float precision on GPU, bugs/features](https://arugl.medium.com/float-precision-on-gpu-bugs-features-178ddd030f) |
 | <img src="https://danilw.github.io/GLSL-howto/vulkan_sh_launcher/images_bugs/tlfBRB.png" width="650" height="auto" /> | [BUG floatBitsToUint comp vs real](https://www.shadertoy.com/view/tlfBRB) - related to blog post [Float precision on GPU, bugs/features](https://arugl.medium.com/float-precision-on-gpu-bugs-features-178ddd030f) |
@@ -73,12 +71,15 @@ ___
 [BUG OpenGL Nvidia high GPU usage](https://www.shadertoy.com/view/tdfGWS) - Nvidia OpenGL compiler bug
 
 [BUG smoothstep( 1, 0 ,0) specs](https://www.shadertoy.com/view/tdf3zf) - `smoothsep` on GPU does not follow specs, when on CPU it does.
+
+[BUG Nvidia OpenGL compiler bug](https://www.shadertoy.com/view/NsdXRs) - Nvidia OpenGL compiler bug, fixed in 510+ driver.
 ___
 
 ## *Not a Bug*, its expected behavior but it still weird
 
 | Screenshot, click to open | Bug link |
 |-------------|------------|
+| <img src="https://danilw.github.io/GLSL-howto/vulkan_sh_launcher/images_bugs/7tjGRW.png" width="650" height="auto" /> | [BUG Nvidia OpenGL arrays wrong](https://www.shadertoy.com/view/7tjGRW) (array and matX indexing) - only Nvidia OpenGL. Can be considered as "not a bug" because UB line 29 `ext_3[return_zero()] += -2147483648` as function argument, so in unknown what will be first `+=` or passing as parameter. |
 | <img src="https://danilw.github.io/GLSL-howto/vulkan_sh_launcher/images_bugs/sllXW8.png" width="650" height="auto" /> | [BUG 32-bit float precision](https://www.shadertoy.com/view/sllXW8) - related to blog post [Float precision on GPU, bugs/features](https://arugl.medium.com/float-precision-on-gpu-bugs-features-178ddd030f) |
 | <img src="https://danilw.github.io/GLSL-howto/vulkan_sh_launcher/images_bugs/ftXXW4.png" width="650" height="auto" /> | [BUG 32-bit float precision test](https://www.shadertoy.com/view/ftXXW4) - Look function `colorAniso()` in shader, for some reason this noise happens when camera look on plane. Source of this behaviour is same why length of normalized vector not equal 1. Also I use this shader to compare 32bit floats vs 64 bit floats. (one more shader to compare float vs double [quartic_Intersection_double.zip](https://danilw.github.io/GLSL-howto/vulkan_sh_launcher/quartic_Intersection_double.zip) (shadertoy link in shader file main_image.glsl) screenshot [quartic_Intersection_double.png](https://danilw.github.io/GLSL-howto/vulkan_sh_launcher/quartic_Intersection_double.png)) |
 | <img src="https://danilw.github.io/GLSL-howto/vulkan_sh_launcher/images_bugs/NlXXWS.png" width="650" height="auto" /> | [BUG GPU driver unroll prediction](https://www.shadertoy.com/view/NlXXWS) - using break in loop adds precision to operation, expected because shader compiler compile shader diferently for each case. |
