@@ -34,6 +34,8 @@ And launch firefox there `DISPLAY=:10 XDG_SESSION_TYPE=x11 firefox`
 
 It will render WebGL on CPU llvmpipe driver. (do not launch chrome this way, chrome will use swiftshader instead of llvmpipe). To see that *llvmpipe* used - `DISPLAY=:10 glxinfo | grep OpenGL | grep string`
 
+Other way is try to use - `LIBGL_ALWAYS_SOFTWARE=1 __GLX_VENDOR_LIBRARY_NAME=mesa VK_ICD_FILENAMES=/usr/share/vulkan/icd.d/lvp_icd.i686.json:/usr/share/vulkan/icd.d/lvp_icd.x86_64.json <command>`
+
 **Use Vulkan Mesa LLVM lavapipe (llvmpipe) Vulkan emulation** (*can be unstable*) 
 
 In Linux install package something like `libvulkan_lvp - Mesa vulkan driver for LVP` (use package search in your Linux).
