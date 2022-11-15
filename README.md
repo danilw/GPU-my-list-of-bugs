@@ -60,6 +60,7 @@ ___
 | <img src="https://danilw.github.io/GLSL-howto/vulkan_sh_launcher/images_bugs/stK3WG.png" width="650" height="auto" /> | [BUG Vulkan Nvidia sin hash](https://www.shadertoy.com/view/stK3WG) - sin hash broken in Vulkan on Nvidia, when in OpenGL everything fine. |
 | <img src="https://danilw.github.io/GLSL-howto/vulkan_sh_launcher/images_bugs/7ddfzr.jpg" width="650" height="auto" /> | [BUG sin not same on AMD/Nvidia](https://www.shadertoy.com/view/7ddfzr) - similar as "sin hash broken" above, but in not-noise shader, in fractal shader sin making different visual image. |
 | <img src="https://danilw.github.io/GLSL-howto/vulkan_sh_launcher/images_bugs/NtfyD2.png" width="650" height="auto" /> | [BUG Nvidia OpenGL ruins float](https://www.shadertoy.com/view/NtfyD2) - Nvidia OpenGL GLSL compiler somehow ruins float, look code. |
+| <img src="https://danilw.github.io/GLSL-howto/vulkan_sh_launcher/images_bugs/mdfSz8.png" width="650" height="auto" /> | [BUG Nvidia fract hash bug](https://www.shadertoy.com/view/mdfSz8) - (OpenGL and Vulkan) Nvidia OpenGL GLSL compiler somehow generates wrong hash-random when precompiling shader, look code. |
 
 [BUG Angle 20x slowdown](https://www.shadertoy.com/view/flSSDV) - DX11 [FXC bug](https://bugs.chromium.org/p/chromium/issues/detail?id=1238461)
 
