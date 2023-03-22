@@ -10,7 +10,9 @@ ___
 
 ### To **test this bugs in Vulkan**:
 
-Just launch webbrowser in Vulkan mode - `chrome.exe --use-angle=vulkan --enable-features=Vulkan,DefaultANGLEVulkan,VulkanFromANGLE`
+Just launch webbrowser in Vulkan mode:
+
+`chrome.exe --use-angle=vulkan --enable-features=Vulkan,DefaultANGLEVulkan,VulkanFromANGLE`
 
 ### To **test in OpenGL**:
 
