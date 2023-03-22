@@ -10,19 +10,17 @@ ___
 
 ### To **test this bugs in Vulkan**:
 
-*(some shaders require modification of Vulkan launcher, or works only in OpenGL, read description on each bug-shader)*
-
-Download *empty_template_shadertoy.zip* from **[vulkan-shadertoy-launcher Release](https://github.com/danilw/vulkan-shadertoy-launcher/releases)** and copy-paste Shadertoy shader to `shaders/shadertoy/*.glsl` files.
+Just launch webbrowser in Vulkan mode - `chrome.exe --use-angle=vulkan --enable-features=Vulkan,DefaultANGLEVulkan,VulkanFromANGLE`
 
 ### To **test in OpenGL**:
 
-Use Linux or in Windows just launch Webbroser with disabled Angle `chrome.exe --use-angle=gl`
+On Windows Linux - just launch Webbroser in OpenGL mode `chrome.exe --use-angle=gl`
 
 ### To test shaders result in CPU-shader emulation:
 
 *Use swiftshader* (works on every platform but this is ***not best option***) 
 
-`google-chrome --incognito --use-gl=swiftshader-webgl`
+`chrome.exe --use-gl=swiftshader-webgl`
 
 Many of listed shaders *will crash swiftshader* or have completely wrong result because bugs in swiftshader.
 
