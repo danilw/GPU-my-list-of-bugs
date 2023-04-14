@@ -18,7 +18,7 @@ Just launch webbrowser in Vulkan mode:
 
 On Windows Linux - just launch Webbroser in OpenGL mode `chrome.exe --use-angle=gl --incognito`
 
-For linux `/usr/bin/google-chrome-stable` with parameters above.
+For linux `/usr/bin/google-chrome-stable` with same parameters.
 
 ### To test shaders result in CPU-shader emulation:
 
