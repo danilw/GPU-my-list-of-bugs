@@ -12,17 +12,17 @@ ___
 
 Just launch webbrowser in Vulkan mode:
 
-`chrome.exe --use-angle=vulkan --enable-features=Vulkan,DefaultANGLEVulkan,VulkanFromANGLE`
+`chrome.exe --use-angle=vulkan --enable-features=Vulkan,DefaultANGLEVulkan,VulkanFromANGLE --incognito`
 
 ### To **test in OpenGL**:
 
-On Windows Linux - just launch Webbroser in OpenGL mode `chrome.exe --use-angle=gl`
+On Windows Linux - just launch Webbroser in OpenGL mode `chrome.exe --use-angle=gl --incognito`
 
 ### To test shaders result in CPU-shader emulation:
 
 *Use swiftshader* (works on every platform but this is ***not best option***) 
 
-`chrome.exe --use-gl=swiftshader-webgl`
+`chrome.exe --use-gl=swiftshader-webgl --incognito`
 
 Many of listed shaders *will crash swiftshader* or have completely wrong result because bugs in swiftshader.
 
