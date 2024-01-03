@@ -65,7 +65,7 @@ ___
 | <img src="https://danilw.github.io/GLSL-howto/vulkan_sh_launcher/images_bugs/7ddfzr_mod2pi.jpg" width="650" height="auto" /> | [BUG mod2pi does not fix sin/cos AMD/Nvidia](https://www.shadertoy.com/view/7ddfzr) - same shader as above, uncomment first two lines with `define`, obvious idea to fix sin inconsistensy just `mod(x,2*PI)` but it not just "not fix" it change pattern on Nvidia where it was working, on Nvidia pattern on left side with define will be different compare to no define. |
 | <img src="https://danilw.github.io/GLSL-howto/vulkan_sh_launcher/images_bugs/NtfyD2.png" width="650" height="auto" /> | [BUG Nvidia OpenGL ruins float](https://www.shadertoy.com/view/NtfyD2) - Nvidia OpenGL GLSL compiler somehow ruins float, look code. |
 
-[BUG Nvidia Vulkan driver no comp](https://www.shadertoy.com/view/XcB3Wm) - Nvidia Vulkan driver compiler bug
+[BUG Nvidia Vulkan driver no comp](https://www.shadertoy.com/view/XcB3Wm) - Nvidia Vulkan driver compiler bug, happening in [*Chrome*](https://bugs.chromium.org/p/chromium/issues/detail?id=1515387)
 
 [BUG Angle 20x slowdown](https://www.shadertoy.com/view/flSSDV) - DX11 [FXC bug](https://bugs.chromium.org/p/chromium/issues/detail?id=1238461)
 
