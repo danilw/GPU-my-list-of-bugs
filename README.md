@@ -7,9 +7,10 @@
 
 ___
 
-Some information related to GPU-stuff can be found it my blog:\
-[Medium blog link](https://arugl.medium.com/).\
-[Github mirror of blog](https://danilw.github.io/blog/).
+### Some information related to GPU-stuff can be found it my blog:
+
+- [Medium blog link](https://arugl.medium.com/)
+- [Github mirror of blog](https://danilw.github.io/blog/)
 
 ___
 
