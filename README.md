@@ -4,6 +4,13 @@
 **what is it** - list of bugs I found writing shaders, mostly shader bugs.
 
 ### Contact: [**Join discord server**](https://discord.gg/JKyqWgt)
+
+___
+
+Some information related to GPU-stuff can be found it my blog:\
+[Medium blog link](https://arugl.medium.com/).\
+[Github mirror of blog](https://danilw.github.io/blog/).
+
 ___
 
 ## Debug:
