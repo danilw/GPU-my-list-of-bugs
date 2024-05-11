@@ -95,6 +95,8 @@ ___
 [BUG smoothstep( 1, 0 ,0) specs](https://www.shadertoy.com/view/tdf3zf) - `smoothsep` on GPU does not follow specs, when on CPU it does.
 
 [BUG Nvidia OpenGL compiler bug](https://www.shadertoy.com/view/NsdXRs) - Nvidia OpenGL compiler bug, fixed in 510+ driver.
+
+[Old GLES2 depth write bug on AMD](https://community.amd.com/t5/opengl-vulkan/amd-gles2-depth-write-broken/m-p/279353) - still broken, I think it another wontfix because no one care about OpenGL.
 ___
 
 ## *Not a Bug*, its expected behavior but it still weird
