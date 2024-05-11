@@ -96,7 +96,7 @@ ___
 
 [BUG Nvidia OpenGL compiler bug](https://www.shadertoy.com/view/NsdXRs) - Nvidia OpenGL compiler bug, fixed in 510+ driver.
 
-[Old GLES2 depth write bug on AMD](https://community.amd.com/t5/opengl-vulkan/amd-gles2-depth-write-broken/m-p/279353) - still broken, I think it another wontfix because no one care about OpenGL.
+[Old GLES2 depth write bug on AMD](https://community.amd.com/t5/opengl-vulkan/amd-gles2-depth-write-broken/m-p/279353) - still broken, I think it another wontfix because no one care about OpenGL. (*Note* - by clicking this link you may trigger interesting web-bug, look below "*Interesting amd forums bug*" - just press enter in address text in webbrowser if you get 403)
 ___
 
 ## *Not a Bug*, its expected behavior but it still weird
