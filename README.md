@@ -145,6 +145,8 @@ ___
 
 [AMD bindless seems bugged](https://youtu.be/Bug2vGm9HZI) - links to bugreports [1](https://gitlab.freedesktop.org/mesa/mesa/-/issues/10581) [2](https://community.amd.com/t5/newcomers-start-here/opengl-4-1-this-api-capture-crash-amd-gpu-driver-on-window-linux/m-p/664656/highlight/true#M2951) [3](https://github.com/DiligentGraphics/DiligentSamples/issues/140). I was debugging/looking `GL_ARB_bindless_texture` in app [Nu.Gaia](https://github.com/bryanedds/Nu) originally and coult not see obvious reasons why it not work on AMD only. [Khronos Bindless_Texture](https://www.khronos.org/opengl/wiki/Bindless_Texture) say - *"Bindless textures are not safe. The API is given fewer opportunities to ensure sane behavior; it is up to the programmer to maintain integrity."* - and there no tools to debug, renderdoc does not support bindless, only what working I found is [apitrace](https://github.com/apitrace/apitrace) and [glintercept](https://github.com/dtrebilco/glintercept/releases/tag/1.3.4) - but they also show everything same on amd/nvidia, so I have no idea why this is not working on amd. As you see on video - other apps that use bindless also bugged on amd, so I assumed, may be wrong - that "it is amd driver bug/behavior with bindless".
 
+[Chrome Vulkan: Fix line-loop draw arrays after elements]([https://youtu.be/Bug2vGm9HZI](https://issues.chromium.org/issues/40911000)) - Google confirmed and fixed one Vulkan related bug in their browser.
+
 *[Interesting amd forums bug](https://youtu.be/B7v4yk8-wzY), not related to graphics, just funny.*
 
 ___
