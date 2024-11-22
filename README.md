@@ -16,43 +16,59 @@ ___
 
 ## Debug:
 
-### To **test this bugs in Vulkan**:
+### On Windows:
 
-Just launch webbrowser in Vulkan mode:
+**OpenGL**:
+
+`chrome.exe --use-angle=gl --incognito`
+
+**Vulkan**:
 
 `chrome.exe --use-angle=vulkan --enable-features=Vulkan,DefaultANGLEVulkan,VulkanFromANGLE --incognito`
 
-### To **test in OpenGL**:
-
-On Windows Linux - just launch Webbroser in OpenGL mode `chrome.exe --use-angle=gl --incognito`
-
-For linux `/usr/bin/google-chrome-stable` with same parameters.
-
-### To test shaders result in CPU-shader emulation:
-
-*Use swiftshader* (works on every platform but this is ***not best option***) 
-
+*Swiftshader*: (do not use it super bugged and broken - there no way to know is it bug in swiftshader on in your code, it also crash)
 `chrome.exe --use-gl=swiftshader-webgl --incognito`
 
-Many of listed shaders *will crash swiftshader* or have completely wrong result because bugs in swiftshader.
+### On Linux:
 
-**Use OpenGL Mesa LLVM (llvmpipe) OpenGL emulation** (***best option***) 
+**OpenGL**:
 
+`/usr/bin/google-chrome-stable`
+
+To force Nvidia GPU over integrated (when display connected to integrated, and Nvidia is second):
+```
+export __NV_PRIME_RENDER_OFFLOAD=1
+export __GLX_VENDOR_LIBRARY_NAME=nvidia
+/usr/bin/google-chrome-stable
+```
+
+**Vulkan**:
+
+```
+/usr/bin/google-chrome-stable --use-angle=vulkan --enable-features=Vulkan,DefaultANGLEVulkan,VulkanFromANGLE --incognito
+```
+
+To force Nvidia for Vulkan - way too complicated - Chrome by default should use discrete when launch in Vulkan mode.\
+*(Chrome may not work in Vulkan mode for some reason - especially on new(2023+) Nvidia GPUs)*
+
+**OpenGL llvmpipe (CPU emulation)**: (very stable, useful)
+
+*Firefox in its own x11 server*:\
 `Xephyr -br -ac -noreset -screen 1280x720 :10&`
 
-And launch firefox there `DISPLAY=:10 XDG_SESSION_TYPE=x11 firefox`
+And launch firefox there `DISPLAY=:10 XDG_SESSION_TYPE=x11 firefox`\
+(do not launch chrome this way, chrome will use swiftshader instead of llvmpipe)\
+To see *llvmpipe* used - `DISPLAY=:10 glxinfo | grep OpenGL | grep string`
 
-It will render WebGL on CPU llvmpipe driver. (do not launch chrome this way, chrome will use swiftshader instead of llvmpipe). To see that *llvmpipe* used - `DISPLAY=:10 glxinfo | grep OpenGL | grep string`
+*Without x11 server*:\
+`LIBGL_ALWAYS_SOFTWARE=1 __GLX_VENDOR_LIBRARY_NAME=mesa VK_ICD_FILENAMES=/usr/share/vulkan/icd.d/lvp_icd.i686.json:/usr/share/vulkan/icd.d/lvp_icd.x86_64.json firefox`
 
-Other way is try to use - `LIBGL_ALWAYS_SOFTWARE=1 __GLX_VENDOR_LIBRARY_NAME=mesa VK_ICD_FILENAMES=/usr/share/vulkan/icd.d/lvp_icd.i686.json:/usr/share/vulkan/icd.d/lvp_icd.x86_64.json <command>`
+**Vulkan llvmpipe (CPU emulation)**: (~stable)
 
-**Use Vulkan Mesa LLVM lavapipe (llvmpipe) Vulkan emulation** (*can be unstable*) 
-
-In Linux install package something like `libvulkan_lvp - Mesa vulkan driver for LVP` (use package search in your Linux).
-
-And select `--gpu=0` in my vulkan-shadertoy-launcher launch line option. GPU should be detected as:
-
-`Vulkan GPU - CPU: llvmpipe (LLVM 13.0.0, 256 bits) (id: 0x0000) from vendor 0x10005 [driver version: 0x0001, API version: 0x4020C3]`
+In Linux install package something like `libvulkan_lvp - Mesa vulkan driver for LVP` (use package search in your Linux).\
+And select `--gpu=0` in my [**vulkan-shadertoy-launcher**](https://github.com/danilw/vulkan-shadertoy-launcher/releases) launch line option.\
+GPU should be detected as:\
+`Vulkan GPU - CPU: llvmpipe (LLVM 13.0.0, 256 bits)...`
 
 ___
 
