@@ -3,6 +3,8 @@
 
 **what is it** - list of bugs I found writing shaders, mostly shader bugs.
 
+## Scroll down to table with screenshots
+
 ### Contact: [**Join discord server**](https://discord.gg/JKyqWgt)
 
 ___
