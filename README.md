@@ -18,6 +18,9 @@ ___
 
 ## Debug:
 
+*To test in Vulkan (Windows/Linux) - you can use my shader launcher (it compatible with most of shadertoy shaders)*:\
+*[Vulkan Shadertoy Launcher](https://github.com/danilw/vulkan-shadertoy-launcher/releases) - follow instructions there.*
+
 ### On Windows:
 
 **OpenGL**:
