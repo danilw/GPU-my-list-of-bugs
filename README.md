@@ -182,4 +182,5 @@ ___
 
 Summer 2021 AMD update their driver (Linux and Windows, close and opensource) with fixing all my bugs that I reported during 2020-2021. Vulkan only fixes, OpenGL still very broken there. (that makes my [GLSL Auto Tetris](https://medium.com/geekculture/launching-619-thousand-tetris-on-gpu-their-rendering-and-a-simple-bot-f2449b607db1) and other my demos work in Vulkan on AMD GPUs)
 
-In 2023-2024 Nvidia and AMD also fixed some Vulkan bugs from this list - but most of OpenGL bugs is "wontfix" at this point.
+In 2023-2024 Nvidia and AMD also fixed some Vulkan bugs from this list - but most of OpenGL bugs is "wontfix" at this point. 
+*(and some security bugs that I not listed here also were fixed, on both gpus)*
