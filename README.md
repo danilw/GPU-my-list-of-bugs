@@ -171,7 +171,7 @@ ___
 
 [Chrome Vulkan: Fix line-loop draw arrays after elements](https://issues.chromium.org/issues/40911000) - Google confirmed and fixed one Vulkan related bug in their browser.
 
-*[Interesting amd forums bug](https://youtu.be/B7v4yk8-wzY), not related to graphics, just funny.*
+*[Interesting amd forums bug](https://youtu.be/B7v4yk8-wzY), not related to graphics, just funny. (read description there)* 
 
 ___
 
