@@ -47,6 +47,8 @@ export __GLX_VENDOR_LIBRARY_NAME=nvidia
 /usr/bin/google-chrome-stable
 ```
 
+*To use zink - https://wiki.archlinux.org/title/OpenGL#OpenGL_over_Vulkan_(Zink) `MESA_LOADER_DRIVER_OVERRIDE=zink`*
+
 **Vulkan**:
 
 ```
