@@ -5,8 +5,6 @@
 
 ## Scroll down to table with screenshots
 
-### Contact: [**Join discord server**](https://discord.gg/JKyqWgt)
-
 ___
 
 ### Some information related to GPU-stuff can be found it my blog:
