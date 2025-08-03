@@ -7,6 +7,12 @@
 
 ___
 
+### Contact with me:
+
+**Matrix-chat room `#Shadertoy:envs.net` invite link** [matrix.to](https://matrix.to/#/#Shadertoy:envs.net) *(use web UI Element if you dont have acc)*
+
+___
+
 ### Some information related to GPU-stuff can be found it my blog:
 
 - [Medium blog link](https://arugl.medium.com/)
